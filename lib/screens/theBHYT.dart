@@ -73,143 +73,202 @@ class _TheBHYTState extends State<TheBHYT> {
                 )
             ),
           ),
-          Padding(
-            padding: const EdgeInsets.all(16.0),
-            child: Container(
-              height: 400,
-              decoration: BoxDecoration(color: AppColor.bluelinth),
-              child: Column(
-                children: [
-                  Padding(
-                    padding: const EdgeInsets.all(18.0),
-                    child: Container(
-                      child: Row(
-                        crossAxisAlignment: CrossAxisAlignment.center,
-                        mainAxisAlignment: MainAxisAlignment.center,
-                        children: [
-                          Image.asset(
-                            Helper.getAssetName("signin.png", "real"),
-                            fit: BoxFit.cover,height: 50,
-                            width: 30,
-                          ),
-                          SizedBox(
-                            width: 12,
-                          ),
-                          Column(
-                            crossAxisAlignment: CrossAxisAlignment.start,
-                            children: [
-                              Text("Hoang Thi Hue"),
-                              SizedBox(
-                                height: 8,
-                              ),
-                              Text("Mã số BHXH: 6622439238"),
-                            ],
-                          ),
-                        ],
+          Container(
+            child: Padding(
+              padding: const EdgeInsets.all(16.0),
+              child: Container(
+                height: 390,
+                decoration: BoxDecoration(color: AppColor.bluelinth),
+                child: Column(
+                  children: [
+                    Padding(
+                      padding: const EdgeInsets.all(18.0),
+                      child: Container(
+                        child: Row(
+                          crossAxisAlignment: CrossAxisAlignment.center,
+                          mainAxisAlignment: MainAxisAlignment.center,
+                          children: [
+                            Image.asset(
+                              Helper.getAssetName("signin.png", "real"),
+                              fit: BoxFit.cover,height: 50,
+                              width: 30,
+                            ),
+                            SizedBox(
+                              width: 12,
+                            ),
+                            Column(
+                              crossAxisAlignment: CrossAxisAlignment.start,
+                              children: [
+                                Text("Hoang Thi Hue", style: TextStyle(color: Colors.black),),
+                                SizedBox(
+                                  height: 8,
+                                ),
+                                Text("Thời hạn có giá trị"),
+                                SizedBox(
+                                  height: 8,
+                                ),
+                                Text("01/01/2023 đến 31/12/2023"),
+                              ],
+                            ),
+                          ],
+                        ),
                       ),
                     ),
-                  ),
-                  const Divider(
-                    color: Colors.black,
-                    height: 5,
-                    thickness: 0.5,
-                    indent: 5,
-                    endIndent: 5,
-                  ),
-                  Container(
-                    child: Padding(
-                      padding: const EdgeInsets.all(14.0),
-                      child: Row(
-                        children: <Widget>[
-                          Text("Ngày sinh"),
-                          SizedBox(
-                            height: 8,
-                          ),
-                          Spacer(),
-                          Text("29/01/2001"),
-                        ],
+                    const Divider(
+                      color: Colors.black,
+                      height: 1,
+                      thickness: 0.5,
+                      indent: 5,
+                      endIndent: 5,
+                    ),
+                    Container(
+                      child: Padding(
+                        padding: const EdgeInsets.all(8.0),
+                        child: Row(
+                          children: <Widget>[
+                            Text("Ngày sinh"),
+                            SizedBox(
+                              height: 8,
+                            ),
+                            Spacer(),
+                            Text("29/01/2001"),
+                          ],
+                        ),
                       ),
                     ),
-                  ),
-                  const Divider(
-                    color: Colors.black,
-                    height: 25,
-                    thickness: 0.3,
-                    indent: 5,
-                    endIndent: 5,
-                  ),
-                  Container(
-                    child: Padding(
-                      padding: const EdgeInsets.all(14.0),
-                      child: Row(
-                        children: <Widget>[
-                          Text("CCCD/CMND/Hộ chiếu"),
-                          SizedBox(
-                            height: 8,
-                          ),
-                          Spacer(),
-                          Text("241972651"),
-                        ],
+                    const Divider(
+                      color: Colors.black,
+                      height: 25,
+                      thickness: 0.3,
+                      indent: 5,
+                      endIndent: 5,
+                    ),
+                    Container(
+                      child: Padding(
+                        padding: const EdgeInsets.all(8.0),
+                        child: Row(
+                          children: <Widget>[
+                            Text("Giới tính"),
+                            SizedBox(
+                              height: 8,
+                            ),
+                            Spacer(),
+                            Text("Nữ"),
+                          ],
+                        ),
                       ),
                     ),
-                  ),
-                  const Divider(
-                    color: Colors.black,
-                    height: 25,
-                    thickness: 0.5,
-                    indent: 5,
-                    endIndent: 5,
-                  ),
-                  Container(
-                    child: Padding(
-                      padding: const EdgeInsets.all(14.0),
-                      child: Row(
-                        children: <Widget>[
-                          Text("Số điện thoại"),
-                          SizedBox(
-                            height: 8,
-                          ),
-                          Spacer(),
-                          Text("0901933916"),
+                    const Divider(
+                      color: Colors.black,
+                      height: 25,
+                      thickness: 0.5,
+                      indent: 5,
+                      endIndent: 5,
+                    ),
+                    Container(
+                      child: Padding(
+                        padding: const EdgeInsets.all(8.0),
+                        child: Row(
+                          children: <Widget>[
+                            Text("Số thẻ BHYT"),
+                            SizedBox(
+                              height: 8,
+                            ),
+                            Spacer(),
+                            Text("HN0901933916"),
 
-                        ],
+                          ],
+                        ),
                       ),
                     ),
-                  ),
-                  const Divider(
-                    color: Colors.black,
-                    height: 25,
-                    thickness: 0.5,
-                    indent: 5,
-                    endIndent: 5,
-                  ),
-                  Container(
-                    child: Padding(
-                      padding: const EdgeInsets.all(14.0),
-                      child: Row(
-                        children: <Widget>[
-                          Text("Địa chỉ"),
-                          SizedBox(
-                            height: 8,
-                          ),
-                          Spacer(),
-                          Column(
-                            mainAxisAlignment: MainAxisAlignment.end,
-                            crossAxisAlignment: CrossAxisAlignment.end,
-                            children: [
-                              Text("05, thôn7, Xã CưKBang,"),
-                              Text("Huyện EaSup, Tỉnh Đắk Lắk"),
-                            ],
-                          ),
+                    const Divider(
+                      color: Colors.black,
+                      height: 25,
+                      thickness: 0.5,
+                      indent: 5,
+                      endIndent: 5,
+                    ),
+                    Container(
+                      child: Padding(
+                        padding: const EdgeInsets.all(8.0),
+                        child: Row(
+                          children: <Widget>[
+                            Text("Nơi ĐKKCCB BĐ"),
+                            SizedBox(
+                              height: 8,
+                            ),
+                            Spacer(),
+                            Column(
+                              mainAxisAlignment: MainAxisAlignment.end,
+                              crossAxisAlignment: CrossAxisAlignment.end,
+                              children: [
+                                Text("Trạm y tế Xã CưKBang(Mã:"),
+                                Text("66009"),
+                              ],
+                            ),
 
-                        ],
+                          ],
+                        ),
                       ),
                     ),
-                  ),
-                ],
+                    const Divider(
+                      color: Colors.black,
+                      height: 25,
+                      thickness: 0.5,
+                      indent: 5,
+                      endIndent: 5,
+                    ),
+                    Container(
+                      child: Padding(
+                        padding: const EdgeInsets.all(8.0),
+                        child: Row(
+                          children: <Widget>[
+                            Text("Thời điểm 5 năm liên tục"),
+                            SizedBox(
+                              height: 8,
+                            ),
+                            Spacer(),
+                            Column(
+                              mainAxisAlignment: MainAxisAlignment.end,
+                              crossAxisAlignment: CrossAxisAlignment.end,
+                              children: [
+                                Text("01/01/2021"),
+                              ],
+                            ),
+
+                          ],
+                        ),
+                      ),
+                    ),
+                  ],
+                ),
               ),
             ),
           ),
+    Container(
+    child: Padding(
+    padding: const EdgeInsets.only(left: 16.0,top: 430.0, right: 16.0, bottom: 16.0),
+    child: Container(
+    height: 500,
+    decoration: BoxDecoration(color: AppColor.bluelinth),
+    child: Column(
+    children: [
+      Container(
+        child: Padding(
+          padding: const EdgeInsets.all(10.0),
+          child: Row(
+            children: <Widget>[
+              Text("Thông tin quyền lợi:", style: TextStyle(color: AppColor.bluedark),),
+            ],
+          ),
+        ),
+      ),
+      Text(" jieweaokswfdc;sldfmv km")
+    ],
+    ),
+    ),
+    ),
+    ),
           Positioned(
               bottom: 0,
               left: 0,
