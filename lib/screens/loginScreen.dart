@@ -3,7 +3,9 @@ import 'package:flutter/material.dart';
 import '../const/colors.dart';
 import '../utils/helper.dart';
 import '../widgets/customTextInput.dart';
-
+import 'package:firebase_auth/firebase_auth.dart';
+import 'package:get/get.dart';
+import 'package:d_method/d_method.dart';
 class LoginScreen extends StatefulWidget {
   const LoginScreen({Key? key}) : super(key: key);
   static const routeName = "/loginScreen";
@@ -13,9 +15,25 @@ class LoginScreen extends StatefulWidget {
 }
 
 class _LoginScreenState extends State<LoginScreen> {
-  var emailController = TextEditingController();
-  var passwordController = TextEditingController();
+  final controllerEmail = TextEditingController();
+  final controllerPassword = TextEditingController();
 
+  login() async {
+
+    print(controllerEmail.text);
+    try {
+      final credential = await FirebaseAuth.instance.signInWithEmailAndPassword(
+          email: controllerEmail.text,
+          password: controllerPassword.text
+      );
+      DMethod.printTitle("login", credential.user!.uid);
+      Get.to(() => const HomeScreen());
+    } on FirebaseAuthException catch (e) {
+      if (e.code == 'user-not-found') {
+      } else if (e.code == 'wrong-password') {}
+      DMethod.printTitle("Firebase Auth Exception", e.code);
+    }
+  }
 
   @override
   Widget build(BuildContext context) {
@@ -44,6 +62,7 @@ class _LoginScreenState extends State<LoginScreen> {
                 shape: StadiumBorder(),
               ),
               child: TextField(
+                controller: controllerEmail,
                 decoration: InputDecoration(
                   prefixIcon: Container(
                       margin: const EdgeInsets.only(right: 12.0),
@@ -54,7 +73,7 @@ class _LoginScreenState extends State<LoginScreen> {
                   hintStyle: TextStyle(
                     color: AppColor.placeholder,
                   ),
-                  contentPadding: EdgeInsets.only(left: 200, top: 15),
+                  contentPadding: EdgeInsets.only(left: 20, top: 15),
                 ),
               ),
             ),
@@ -67,6 +86,7 @@ class _LoginScreenState extends State<LoginScreen> {
                 shape: StadiumBorder(),
               ),
               child: TextField(
+                controller: controllerPassword,
                 decoration: InputDecoration(
                   prefixIcon: Container(
                       margin: const EdgeInsets.only(right: 12.0),
@@ -77,7 +97,7 @@ class _LoginScreenState extends State<LoginScreen> {
                   hintStyle: TextStyle(
                     color: AppColor.placeholder,
                   ),
-                  contentPadding: EdgeInsets.only(left: 200, top: 15),
+                  contentPadding: EdgeInsets.only(left: 20, top: 15),
                 ),
               ),
             ),
@@ -102,6 +122,7 @@ class _LoginScreenState extends State<LoginScreen> {
                   height: 50,
                   width: double.infinity,
                   child:ElevatedButton(
+                      onPressed: () => login(),
                       child: Text(
                           "Đăng nhập".toUpperCase(),
                           style: TextStyle(fontSize: 14)
@@ -115,11 +136,6 @@ class _LoginScreenState extends State<LoginScreen> {
                               )
                           )
                       ),
-                      onPressed: () {
-                        Navigator.of(context)
-                            .pushReplacementNamed(HomeScreen.routeName);
-
-                      }
                   )
                 ),
                 SizedBox(height: 10,),

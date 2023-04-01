@@ -18,45 +18,25 @@ class _ThongtinState extends State<Thongtin> {
       appBar: PreferredSize(
         preferredSize: Size.fromHeight(70),
         child: AppBar(
+          automaticallyImplyLeading: false,
           title: Container(
             child: Padding(
               padding: const EdgeInsets.all(14.0),
               child: Row(
                 children: <Widget>[
+
+                  IconButton(
+                    icon: const Icon(Icons.arrow_back_ios),
+                    onPressed: () {
+                      Navigator.pop(context);
+                    },
+                  ),
+                  SizedBox(width: 40,),
                   Text("THÔNG TIN HƯỞNG"),
                 ],
               ),
             ),
           ),
-        ),
-      ),
-      drawer: Drawer(
-        backgroundColor: Colors.blue,
-        // Add a ListView to the drawer. This ensures the user can scroll
-        // through the options in the drawer if there isn't enough vertical
-        // space to fit everything.
-        child: ListView(
-          // Important: Remove any padding from the ListView.
-          padding: EdgeInsets.zero,
-          children: [
-            DrawerHeader(
-              decoration: BoxDecoration(
-                color: Colors.blue,
-              ),
-              child:
-              Column(
-                children: [
-                  Image.asset(
-                    Helper.getAssetName("signin.png", "real"),
-                    fit: BoxFit.cover,height: 50,
-                    width: 30,
-                  ),
-                  Text("Hoang Thi Hue",style: TextStyle(color: Colors. white),),
-                  Text("6622439237",style: TextStyle(color: Colors. white),),
-                ],
-              ),
-            ),
-          ],
         ),
       ),
       body: Stack(
@@ -117,11 +97,13 @@ class _ThongtinState extends State<Thongtin> {
                 child: Column(
                   children: [
                     Container(
+                      width: Helper.getScreenWidth(context),
                       child: Padding(
                         padding: const EdgeInsets.all(10.0),
                         child: Row(
+                          mainAxisAlignment: MainAxisAlignment.center,
                           children: <Widget>[
-                            Text( "Thông tin hưởng BHXH 1 lần", style: TextStyle(color: AppColor.bluedark),),
+                            Text( "Thông tin hưởng BHXH 1 lần", style: TextStyle(color: AppColor.bluedark),textAlign: TextAlign.center,),
                           ],
                         ),
                       ),

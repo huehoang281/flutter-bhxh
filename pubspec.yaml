@@ -40,6 +40,16 @@ dependencies:
 dev_dependencies:
   flutter_test:
     sdk: flutter
+  firebase_core: ^2.5.0   # for install
+  flutterfire_cli: ^0.2.7    #cli for install
+  firebase_database: ^10.0.11   #add url database
+  firebase_core_web: ^2.1.1  #nothing
+  d_input: ^0.0.7   #form input
+  d_view: ^0.0.3    #layout Ui
+  d_info: ^0.2.0
+  d_method:
+  get: ^4.6.5    #Https protocol
+  firebase_auth: ^4.2.9
 
   # The "flutter_lints" package below contains a set of recommended lints to
   # encourage good coding practices. The lint set provided by the package is

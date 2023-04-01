@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "611727829919",
+    "project_id": "baohiemyte-12cae",
+    "storage_bucket": "baohiemyte-12cae.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:611727829919:android:da397ca93bd622331febaa",
+        "android_client_info": {
+          "package_name": "com.example.baohiemyte"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "611727829919-r13lggpucalfe1het4vcsk774k7e6o78.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCeduY8Pie-evUkJUWX-BhL9O7PKNz-qHQ"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "611727829919-r13lggpucalfe1het4vcsk774k7e6o78.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

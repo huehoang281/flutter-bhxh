@@ -18,11 +18,18 @@ class _SokhamState extends State<Sokham> {
       appBar: PreferredSize(
         preferredSize: Size.fromHeight(70),
         child: AppBar(
+          automaticallyImplyLeading: false,
           title: Container(
             child: Padding(
               padding: const EdgeInsets.all(14.0),
               child: Row(
                 children: <Widget>[
+                  IconButton(
+                    icon: const Icon(Icons.arrow_back_ios),
+                    onPressed: () {
+                      Navigator.pop(context);
+                    },
+                  ),
                   Text("SỔ KHÁM BỆNH"),
                 ],
               ),

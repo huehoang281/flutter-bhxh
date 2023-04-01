@@ -241,28 +241,36 @@ class _HomeScreenState extends State<HomeScreen> {
                               GestureDetector(
                                   child: CategoryCard(image: Icon(Icons.medical_information_outlined,color: AppColor.bluedark,), name: "THẺ BHYT"),
                                   onTap: () {
-                                    Navigator.of(context)
-                                        .pushReplacementNamed(TheBHYT.routeName);
+                                    Navigator.push(
+                                      context,
+                                      MaterialPageRoute(builder: (context) => const TheBHYT()),
+                                    );
                                   },
 
                               ),
                               GestureDetector(
                                   child: CategoryCard(image: Icon(Icons.av_timer_outlined,color: AppColor.bluedark,), name: "QUÁ TRÌNH THAM GIA"),
                                 onTap: () {
-                                  Navigator.of(context)
-                                      .pushReplacementNamed(Thamgia.routeName);
+                                  Navigator.push(
+                                    context,
+                                    MaterialPageRoute(builder: (context) => const Thamgia()),
+                                  );
                                 },),
                               GestureDetector(
                                   child: CategoryCard(image: Icon(Icons.personal_injury_outlined,color: AppColor.bluedark,), name: "THÔNG TIN THƯỞNG"),
                                   onTap: () {
-                                    Navigator.of(context)
-                                        .pushReplacementNamed(Thongtin.routeName);
+                                    Navigator.push(
+                                      context,
+                                      MaterialPageRoute(builder: (context) => const Thongtin()),
+                                    );
                                   }),
                               GestureDetector(
                                   child: CategoryCard(image: Icon(Icons.medical_services_outlined,color: AppColor.bluedark,), name: "SỔ KHÁM CHỮA BỆNH"),
                                   onTap: () {
-                                    Navigator.of(context)
-                                        .pushReplacementNamed(Sokham.routeName);
+                                    Navigator.push(
+                                      context,
+                                      MaterialPageRoute(builder: (context) => const Sokham()),
+                                    );
                                   })
                             ],
                           ),
